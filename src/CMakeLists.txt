@@ -14,8 +14,8 @@ configure_file(config.h.in config.h)
 
 # add math library
 if(USE_MYMATH)
-  add_subdirectory(MathFunctions)
-  list(APPEND EXTRA_LIBS MathFunctions)
+    add_subdirectory(MathFunctions)
+    list(APPEND EXTRA_LIBS MathFunctions)
 endif()
 
 # add the executable
@@ -26,4 +26,9 @@ target_link_libraries(Tutorial PUBLIC ${EXTRA_LIBS})
 # Add config file to include path
 target_include_directories(Tutorial PUBLIC
     "${PROJECT_BINARY_DIR}"
+)
+
+install(TARGETS Tutorial DESTINATION bin)
+install(FILES "${PROJECT_BINARY_DIR}/config.h"
+    DESTINATION include
 )
