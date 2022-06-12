@@ -7,6 +7,9 @@ project(Tutorial VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
 
+# enable dashboard scripting
+include(CTest)
+
 add_subdirectory(src)
 
 # Add packaging support

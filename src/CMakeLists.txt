@@ -26,8 +26,6 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/config.h"
     DESTINATION include
 )
 
-enable_testing()
-
 # does it even run
 add_test(NAME Runs COMMAND Tutorial 25)
 
