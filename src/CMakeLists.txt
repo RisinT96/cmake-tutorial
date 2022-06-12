@@ -16,6 +16,8 @@ add_subdirectory(MathFunctions)
 
 # add the executable
 add_executable(Tutorial tutorial.cxx)
+set_target_properties(Tutorial PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
+
 target_link_libraries(Tutorial PUBLIC MathFunctions)
 
 # Add config file to include path

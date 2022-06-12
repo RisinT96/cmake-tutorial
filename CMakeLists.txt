@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.15)
 # set the project name
 project(Tutorial VERSION 0.1.0)
 
+set(CMAKE_DEBUG_POSTFIX d)
+
 add_library(tutorial_compiler_flags INTERFACE)
 target_compile_features(tutorial_compiler_flags INTERFACE cxx_std_11)
 
